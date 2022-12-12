@@ -1,0 +1,17 @@
+{% extends "Yaroslav\base.html" %}
+{% block title %}Адресс
+{% endblock %}
+{% block content %}
+<style>
+    body{
+        color: wheat;
+    }
+</style>
+<p>{{data.name}} {{data.surname}}, проверьте аддресс доставки:
+    <br>{{data.side}}
+    <br>{{data.region}}
+    <br>{{data.city}}
+    <br>{{data.street}} {{data.house}}
+</p>
+
+{% endblock %}

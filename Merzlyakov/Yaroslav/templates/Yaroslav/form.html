@@ -1,0 +1,21 @@
+{%load static%}
+<div class="form">
+    
+    <div class="form__wrap">        
+        <form class="form__table" method="post" action="appointment/">
+            {%csrf_token%}
+            <div class="form__input title"><h2 class="form__title">Make an appointment</h2></div>
+            <div name ='name'  class="form__input name">
+                <input placeholder="Name" type="text" class="form__input-wrap" name="form__name">
+            </div>
+            <div name ='email'  class="form__input email">
+                <input placeholder="Email" type="text" class="form__input-wrap" name="form__email">
+            </div>
+            <div name ='phone' class="form__input phone_number"><input type="text"placeholder="Phone Number" class="form__input-wrap" name="form__phone"></div>
+            <div name ='service' class="form__input select_service"><input type="text" placeholder="Select Service" class="form__input-wrap" name="form__service"></div>
+            <div name ='about' class="form__input content"><textarea placeholder="Tell us about the car needing service(s)" type="text" class="form__input-wrap form__input-wrap_textarea" name="form__about"></textarea></div>
+            <div class="form__input btn"><button type="submit" class="form__text" ><p>Make an Appointment</p></button></div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,243 @@
+{%load static%}
+/* Указываем box sizing */
+body{
+    background: #02133C;
+}
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  -webkit-appearance: none;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+ }
+}
+.container{
+    width: 1440px;
+    display: flex;
+    margin:  0 auto;
+}
+
+/* form */
+.form{
+    margin-top: 130px;
+    background-color: #fff;
+}
+.form__title{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    color: #02133C;
+    margin-bottom: 26px;
+
+}
+.form__table{
+    margin: 76px 57px 76px 58px;
+    display: grid;
+    grid-template-columns: 224px 224px;
+    grid-template-rows: 42px 48px 48px 180px 48px;
+    gap: 22px 22px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "title title"
+      "name Email"
+      "phone-number Select-service"
+      "content content"
+      ". btn";
+}
+  
+.Email { grid-area: Email; }
+  
+.name { grid-area: name; }
+  
+.phone_number { grid-area: phone-number; }
+  
+.select_service { grid-area: Select-service; }
+
+.content {
+    grid-area: content;
+    
+}
+.form__input{
+    background: #F5F5F5;
+}
+.title {
+    grid-area: title;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+.btn { 
+    grid-area: btn; 
+    background: #C40B0B;
+    display: flex;
+    margin-top: 6px;
+
+}
+
+.form__input-wrap{
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 23.5px;
+    display: flex;
+    justify-content: flex-start;
+}
+.form__input-wrap:focus-visible{
+    outline: none;
+}
+.form__input-wrap_textarea{
+    margin-top: 2%;
+    resize:none;
+    overflow: hidden;
+    height: 90%;
+}
+.form__text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 2px;
+    padding-left: 19px;
+    background:transparent ;
+    border: 0;
+    width: 100%;
+}
+.form__text p{
+    display: flex; 
+    align-items: center;
+
+}
+.form__text p::after{
+    content: '';
+    background: url('../img/arrow.svg') center center/cover;
+    display: block;
+    width: 48px;
+    height: 43px;
+    margin-left: 13px;
+
+    
+}
+.form__text:focus-visible{
+    outline: 0;
+}
+
+
+/* first */
+.first{
+    height: 324px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 111px;
+    margin-top: 296px;
+
+}
+.first__title{
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.first__count{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #C40B0B;
+}
+.first__text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.first::after{
+    content: '';
+
+}

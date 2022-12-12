@@ -1,0 +1,14 @@
+{% extends "Yaroslav\base.html" %}
+{% block title %}Форма доставки{% endblock %}
+{% block content %}
+<style>
+    body{
+        color: white;
+    }
+</style>
+<form action="/order/" method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">Отправить форму</button>
+</form>
+{% endblock %}
